@@ -1,0 +1,22 @@
+{
+  "name": "digestauthenticator",
+  "version": "1.0.0",
+  "description": "Digest認証用フィルター",
+  "main": "index.js",
+  "dependencies": {
+    "csv-parse": "^4.2.0",
+    "moment": "^2.23.0",
+    "moment-timezone": "^0.5.23"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.380.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "make": "rm -f build/index.js && rm -f digestauthenticator.zip && webpack && zip -r digestauthenticator.zip build/index.js ./.master/id_pass.json"
+  },
+  "author": "ONE WEDGE Inc.",
+  "license": "UNLICENSED",
+  "private": true
+}
