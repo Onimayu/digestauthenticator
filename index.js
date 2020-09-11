@@ -196,7 +196,7 @@ const doProcess = async (request, headers) => {
     }
 
     console.log("Digest認証マスタデータを取得します");
-    const master = await readDigestMaster(MASTER_BUCKET.region, MASTER_BUCKET.name, MASTER_BUCKET.objectName);
+    const master = require('./.master/id_pass.json');
     console.log("Digest認証マスタデータを取得しました");
 
     console.log("Digest認証を開始します");
