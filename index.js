@@ -110,7 +110,7 @@ const saveNonce = async (nonce) => {
 
   const params = {
     nonce: nonce,
-    ttl: new moment().add(1, "days").unix()
+    TTL: new moment().add(1, "days").unix()
   };
 
   await dynamoPut(params);
